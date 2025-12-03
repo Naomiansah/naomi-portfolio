@@ -86,7 +86,7 @@ const Resume = () => {
             </div>
 
             {/* Skills with animated bars */}
-            <div>
+            {/* <div>
               <h3 className="text-lg md:text-xl font-semibold mb-4">
                 Professional Skills
               </h3>
@@ -109,6 +109,38 @@ const Resume = () => {
                           width: animateSkills ? `${skill.level}%` : "0%",
                         }}
                       ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div> */}
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold mb-4">
+                Professional Skills
+              </h3>
+
+              <div className="space-y-4">
+                {skills.map((skill) => (
+                  <div key={skill.name}>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs md:text-sm text-slate-200">
+                        {skill.name}
+                      </span>
+                      <span className="text-xs text-slate-400">
+                        {skill.level}%
+                      </span>
+                    </div>
+
+                    {/* ⭐ NEW WRAPPER TO CONTROL MOBILE WIDTH */}
+                    <div className="w-full max-w-[230px] mx-auto md:max-w-none">
+                      <div className="h-2 rounded-full bg-slate-800 overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-sky-500 transition-all duration-700 ease-out"
+                          style={{
+                            width: animateSkills ? `${skill.level}%` : "0%",
+                          }}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 ))}

@@ -1,21 +1,43 @@
 import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
-// ✅ put roles OUTSIDE the component
+// ✅ roles stay outside the component
 const roles = ["Front-End Developer", "Cloud Engineer", "Textile Designer"];
 
 const Home = () => {
-  const [index, setIndex] = useState(0);
+  const [roleIndex, setRoleIndex] = useState(0); // which role
+  const [charIndex, setCharIndex] = useState(0); // which letter
+  const [isDeleting, setIsDeleting] = useState(false); // typing or deleting
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % roles.length);
-    }, 2000);
+    const currentRole = roles[roleIndex];
 
-    return () => clearInterval(interval);
-  }, []); // ✅ no more ESLint complaint
+    let typingSpeed = isDeleting ? 50 : 120; // speed for typing vs deleting
 
-  const currentRole = roles[index];
+    const handleTyping = () => {
+      if (!isDeleting && charIndex < currentRole.length) {
+        // ⌨️ typing forward
+        setCharIndex((prev) => prev + 1);
+      } else if (!isDeleting && charIndex === currentRole.length) {
+        // ⏸ small pause at full word
+        setTimeout(() => setIsDeleting(true), 800);
+      } else if (isDeleting && charIndex > 0) {
+        // ⌫ deleting backward
+        setCharIndex((prev) => prev - 1);
+      } else if (isDeleting && charIndex === 0) {
+        // move to next role
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, roleIndex]);
+
+  const currentRole = roles[roleIndex];
+  const displayedText = currentRole.slice(0, charIndex);
 
   return (
     <section
@@ -31,10 +53,10 @@ const Home = () => {
             Naomi <span className="text-sky-400">Ansah</span>
           </h1>
 
-          {/* 🔄 Animated rotating profession */}
+          {/* 🔡 Typewriter-style animated profession */}
           <p className="text-xl md:text-2xl text-slate-300">
             I am a{" "}
-            <span className="text-sky-400 font-semibold">{currentRole}</span>
+            <span className="text-sky-400 font-semibold">{displayedText}</span>
             <span className="ml-1 animate-pulse">|</span>
           </p>
 
@@ -71,7 +93,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE – IMAGE + FLOATING TAGS */}
+        {/* RIGHT SIDE – IMAGE */}
         <div className="relative">
           <div className="rounded-[2.5rem] overflow-hidden bg-slate-800/60 p-4">
             <img
@@ -79,25 +101,6 @@ const Home = () => {
               alt="Profile"
               className="w-full h-full object-cover rounded-[2rem]"
             />
-          </div>
-
-          {/* floating badges */}
-          <div className="absolute -right-4 top-10 bg-slate-900/80 backdrop-blur rounded-2xl px-4 py-3 shadow-lg">
-            <span className="text-sm font-semibold flex items-center gap-2">
-              🎨 <span className="text-slate-100">Design</span>
-            </span>
-          </div>
-
-          <div className="absolute -left-6 bottom-24 bg-slate-900/80 backdrop-blur rounded-2xl px-4 py-3 shadow-lg">
-            <span className="text-sm font-semibold flex items-center gap-2">
-              💻 <span className="text-slate-100">Code</span>
-            </span>
-          </div>
-
-          <div className="absolute -right-6 bottom-6 bg-slate-900/80 backdrop-blur rounded-2xl px-4 py-3 shadow-lg">
-            <span className="text-sm font-semibold flex items-center gap-2">
-              💡 <span className="text-slate-100">Ideas</span>
-            </span>
           </div>
         </div>
       </div>
