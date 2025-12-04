@@ -21,7 +21,7 @@ const Contact = () => {
       });
 
       if (res.ok) {
-        setStatus("Thank you for reaching out. I’ll get back to you soon!");
+        setStatus("Thank you for reaching out. I'll get back to you soon!");
         form.reset();
       } else {
         setStatus("Something went wrong. Please try again in a moment.");
@@ -43,8 +43,8 @@ const Contact = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Contact</h2>
           <p className="text-slate-400 text-sm md:text-base">
-            Whether it’s a collaboration, a project idea, or a simple question,
-            feel free to reach out. I’m always happy to connect.
+            Whether it's a collaboration, a project idea, or a simple question,
+            feel free to reach out. I'm always happy to connect.
           </p>
         </div>
 
@@ -54,11 +54,11 @@ const Contact = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg md:text-xl font-semibold mb-2">
-                Let’s talk
+                Let's talk
               </h3>
               <p className="text-slate-300 text-sm md:text-base">
-                Share a bit about what you’re working on or what you’d like help
-                with. I’ll respond as soon as I can.
+                Share a bit about what you're working on or what you'd like help
+                with. I'll respond as soon as I can.
               </p>
             </div>
 
