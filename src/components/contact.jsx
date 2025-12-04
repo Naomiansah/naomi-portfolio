@@ -3,10 +3,33 @@ import React, { useState } from "react";
 const Contact = () => {
   const [status, setStatus] = useState("");
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // For now, just fake a submit
-    setStatus("Thank you for reaching out. I’ll get back to you soon!");
+    setStatus("Sending...");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xeoyzgdg", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        setStatus("Thank you for reaching out. I’ll get back to you soon!");
+        form.reset();
+      } else {
+        setStatus("Something went wrong. Please try again in a moment.");
+      }
+    } catch {
+      setStatus("Network error. Please check your connection and try again.");
+    }
+
     setTimeout(() => setStatus(""), 5000);
   };
 
@@ -97,6 +120,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   required
                   className="w-full rounded-lg bg-slate-900/70 border border-slate-700 px-3 py-2 text-sm md:text-base
@@ -113,6 +137,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   required
                   className="w-full rounded-lg bg-slate-900/70 border border-slate-700 px-3 py-2 text-sm md:text-base
@@ -129,7 +154,8 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  rows="4"
+                  name="message"
+                  rows={4}
                   required
                   className="w-full rounded-lg bg-slate-900/70 border border-slate-700 px-3 py-2 text-sm md:text-base
                              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 resize-none"
