@@ -11,6 +11,7 @@ const Footer = () => {
             <span className="text-slate-200 font-medium">Naomi Ansah</span>. All
             rights reserved.
           </p>
+          <p>This is built with ❤️</p>
 
           <div className="flex items-center gap-4">
             <a
