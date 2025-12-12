@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-slate-900 text-slate-100 flex items-center"
+      className="min-h-screen bg-slate-900 text-slate-100 flex items-center pt-20"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE – TEXT */}
