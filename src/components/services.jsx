@@ -66,9 +66,9 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Services</h2>
           <p className="text-slate-400 text-sm md:text-base">
-            Here’s how I can add value right now — combining my front-end,
-            cloud, and textile background to support thoughtful digital and
-            creative projects.
+            Here's how I can add value right now, combining my front-end, cloud,
+            and textile background to support thoughtful digital and creative
+            projects.
           </p>
         </div>
 

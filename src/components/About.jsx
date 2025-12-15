@@ -27,12 +27,12 @@ const About = () => {
             </p>
 
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-              Hi, I'm Naomi - a calm-minded creative who designs tactile,
+              Hi, I'm Naomi, a calm-minded creative who designs tactile,
               cloud-powered digital journeys.
             </h3>
 
             <p className="text-slate-300 text-sm md:text-base">
-              I’m a curious builder who moves comfortably between{" "}
+              I'm a curious builder who moves comfortably between{" "}
               <span className="text-sky-400 font-medium">
                 front-end development
               </span>
@@ -48,7 +48,7 @@ const About = () => {
             </p>
 
             <p className="text-slate-400 text-sm md:text-base">
-              I love turning messy ideas into structured, beautiful outcomes -
+              I love turning messy ideas into structured, beautiful outcomes;
               especially for education, sustainability, and women-in-tech
               spaces.
             </p>

@@ -49,8 +49,12 @@ const Home = () => {
         <div className="space-y-6">
           <p className="text-sky-400 font-semibold text-lg">Hello, I'm</p>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          {/* <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Naomi <span className="text-sky-400">Ansah</span>
+          </h1> */}
+          <h1 className="text-4xl md:text-6xl leading-tight">
+            <span className="font-['Monoton'] tracking-wider">Naomi</span>{" "}
+            <span className="text-sky-400 font-bold">Ansah</span>
           </h1>
 
           {/* 🔡 Typewriter-style animated profession */}
