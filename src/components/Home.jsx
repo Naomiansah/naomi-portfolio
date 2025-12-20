@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
 // ✅ roles stay outside the component
-const roles = ["Front-End Developer", "Cloud Engineer", "Textile Designer"];
+const roles = [
+  "Junior Cloud Engineer (AWS | Cloud Operations)",
+  "Front-End Developer",
+  "Textile Designer",
+];
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0); // which role
@@ -65,10 +69,13 @@ const Home = () => {
           </p>
 
           <p className="text-slate-300 max-w-xl">
-            I'm a passionate problem-solver who blends technology and creativity
-            to build meaningful digital experiences. Whether I'm designing
-            intuitive web solutions, architecting cloud systems, or creating
-            nature-inspired textile pieces, my goal is to deliver work that is
+            I am a junior cloud engineer with hands-on experience deploying,
+            securing, and monitoring AWS-based infrastructure, focused on
+            building reliable, scalable systems and automating deployments using
+            CI/CD best practices. I'm also a passionate problem-solver who
+            blends technology and creativity to build meaningful digital
+            experiences.Whether designing intuitive web interfaces, architecting
+            cloud systems, or creating nature-inspired textile pieces that are
             functional, beautiful, and impactful.
           </p>
 
