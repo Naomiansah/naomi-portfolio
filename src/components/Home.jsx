@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
 // ✅ roles stay outside the component
-const roles = ["Cloud Engineer", "Front-End Developer", "Textile Designer"];
+const roles = [
+  "Junior Cloud Engineer",
+  "Front-End Developer",
+  "Textile Designer",
+];
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0); // which role
@@ -66,15 +70,15 @@ const Home = () => {
 
           <p className="text-slate-300 max-w-xl">
             I am a junior cloud engineer with hands-on experience deploying,
-            securing, and monitoring AWS-based infrastructure, focused on
-            building reliable, scalable systems and automating deployments using
-            CI/CD best practices.
+            securing, and monitoring AWS-based infrastructure, including static
+            and cloud-backed applications. I focus on building reliable,
+            scalable systems, understanding how services work together, and
+            troubleshooting real deployment issues.
             <p>
-              I'm also a passionate problem-solver who blends technology and
-              creativity to build meaningful digital experiences. Whether
-              designing intuitive web interfaces, architecting cloud systems, or
-              creating nature-inspired textile pieces that are functional,
-              beautiful, and impactful.
+              I also bring frontend development experience, allowing me to
+              collaborate on end-to-end solutions from user interface to cloud
+              deployment with clarity, precision, and a strong problem-solving
+              mindset.
             </p>
           </p>
 
