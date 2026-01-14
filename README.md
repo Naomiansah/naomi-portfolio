@@ -42,3 +42,12 @@ src/         → React application source code
 public/      → Static assets
 .github/     → CI/CD workflows
 ```
+
+## Running Locally
+
+To run this project locally:
+
+```bash
+npm install
+npm run dev
+```
