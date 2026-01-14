@@ -1,16 +1,44 @@
-# React + Vite
+# Naomi Ansah – Cloud Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code and infrastructure configuration for my personal cloud portfolio website.
 
-Currently, two official plugins are available:
+The project was built to move beyond isolated AWS labs and demonstrate how a real-world static website can be securely deployed, automated, and operated in production.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Website
 
-## React Compiler
+https://naomiansah.blog
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Architecture Diagram
 
-## Expanding the ESLint configuration
+![Portfolio Architecture](docs/portfolio-architecture.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Request Flow Overview
+
+1. A user accesses the website via HTTPS using a custom domain.
+2. DNS is managed by an external provider (NameSilo), which routes traffic to Amazon CloudFront.
+3. CloudFront acts as the public entry point and terminates HTTPS using an ACM-managed SSL certificate.
+4. If the requested content is cached at the edge, CloudFront serves it immediately.
+5. On a cache miss, CloudFront securely fetches content from a **private Amazon S3 bucket** using Origin Access Control (OAC).
+6. Static assets are built and deployed automatically via **GitHub Actions**, with cache invalidation ensuring users receive the latest version.
+
+---
+
+## Technologies Used
+
+- React + Vite
+- Amazon S3 (private bucket)
+- Amazon CloudFront
+- AWS Certificate Manager (ACM)
+- GitHub Actions (CI/CD)
+- External DNS (NameSilo)
+
+---
+
+## Repository Structure
+
+```text
+docs/        → Architecture diagrams and documentation
+src/         → React application source code
+public/      → Static assets
+.github/     → CI/CD workflows
+```
