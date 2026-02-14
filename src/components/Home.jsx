@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
 // ✅ roles stay outside the component
-const roles = [
-  "Junior Cloud Engineer",
-  "Front-End Developer",
-  "Textile Designer",
-];
+const roles = [" Cloud Engineer", "Front-End Developer", "Textile Designer"];
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0); // which role
