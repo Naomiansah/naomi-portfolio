@@ -37,14 +37,14 @@ const About = () => {
               scalable systems, and seamless user experiences.
             </p>
 
-            <p className="text-slate-400 text-sm md:text-base">
+            <p className="text-slate-300 text-sm md:text-base">
               With a background in textile design, I bring a strong eye for
               detail, color, and user-centered thinking. This allows me to
               create products that are not only functional, but visually
               intuitive and engaging.
             </p>
 
-            <p className="text-slate-400 text-sm md:text-base">
+            <p className="text-slate-300 text-sm md:text-base">
               I enjoy turning ideas into structured, production-ready solutions,
               especially in education, sustainability, and community-driven
               spaces.
