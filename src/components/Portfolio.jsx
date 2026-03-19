@@ -67,14 +67,16 @@ const Portfolio = () => {
 
               <div className="flex gap-3 mt-3">
                 <a
-                  href="#"
+                  href="https://dev.to/naomi_ansah_d792faf7a1276/how-i-secured-my-static-website-at-the-edge-using-amazon-cloudfront-12ho"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm hover:bg-sky-600"
                 >
-                  Live Demo
+                  Case Study
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/Naomiansah/s3-cloudfront-terraform"
                   className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
                 >
                   GitHub
