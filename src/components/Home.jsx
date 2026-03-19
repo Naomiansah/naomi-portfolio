@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
-const roles = ["Cloud Engineer", "Front-End Developer", "Textile Designer"];
+const roles = ["Front-End Developer", "Cloud Engineer", "AWS Builder"];
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
