@@ -1,7 +1,6 @@
 import React from "react";
 
-import cloud1 from "../assets/images/cloud1.jpg";
-import cloud2 from "../assets/images/cloud2.jpg";
+import Portfolioarchitecture from "../assets/images/portfolioarchitecture.png";
 
 import web1 from "../assets/images/web1.jpeg";
 import web2 from "../assets/images/web2.jpeg";
@@ -22,7 +21,7 @@ const Portfolio = () => {
 
         <p className="text-center text-slate-300 max-w-2xl mx-auto mb-12">
           A showcase of my work across cloud engineering, web development, and
-          creative design — combining technical skill with user-centered
+          creative design, combining technical skill with user-centered
           thinking.
         </p>
 
@@ -33,8 +32,10 @@ const Portfolio = () => {
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60">
                 <div className="h-full w-full overflow-y-scroll">
-                  <img src={cloud1} className="w-full mb-3 rounded-lg" />
-                  <img src={cloud2} className="w-full rounded-lg" />
+                  <img
+                    src={Portfolioarchitecture}
+                    className="w-full mb-3 rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -42,10 +43,27 @@ const Portfolio = () => {
                 Cloud Engineering
               </h3>
 
+              {/* 👉 ADD TAGS HERE */}
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
+                  AWS
+                </span>
+                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
+                  CloudFront
+                </span>
+                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
+                  S3
+                </span>
+                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
+                  CI/CD
+                </span>
+              </div>
+
               <p className="text-slate-400 text-sm">
-                Designed and deployed cloud-based infrastructure using AWS
-                services including EC2, S3, and networking. Implemented
-                real-world DevOps practices with scalable and reliable setups.
+                Designed and deployed a secure static website using Amazon S3
+                and CloudFront, integrated with a CI/CD pipeline using GitHub
+                Actions for automated builds and deployments. Implemented DNS
+                routing and edge caching for performance and scalability.
               </p>
 
               <div className="flex gap-3 mt-3">
