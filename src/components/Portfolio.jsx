@@ -21,93 +21,120 @@ const Portfolio = () => {
         </h2>
 
         <p className="text-center text-slate-300 max-w-2xl mx-auto mb-12">
-          A showcase of my creative work across cloud engineering, web
-          development, and textile design.
+          A showcase of my work across cloud engineering, web development, and
+          creative design — combining technical skill with user-centered
+          thinking.
         </p>
 
         {/* GRID */}
         <div className="grid md:grid-cols-3 gap-10">
-          {/* ---- CLOUD PROJECTS (FIRST) ---- */}
+          {/* ---- CLOUD PROJECT ---- */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60">
                 <div className="h-full w-full overflow-y-scroll">
-                  <img
-                    src={cloud1}
-                    className="w-full mb-3 rounded-lg"
-                    alt="Cloud Project 1"
-                  />
-                  <img
-                    src={cloud2}
-                    className="w-full rounded-lg"
-                    alt="Cloud Project 2"
-                  />
+                  <img src={cloud1} className="w-full mb-3 rounded-lg" />
+                  <img src={cloud2} className="w-full rounded-lg" />
                 </div>
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
                 Cloud Engineering
               </h3>
-              <p className="text-slate-400">
-                AWS-based deployments, EC2 servers, networking, automation, and
-                hands-on cloud engineering projects from my re/Start journey.
+
+              <p className="text-slate-400 text-sm">
+                Designed and deployed cloud-based infrastructure using AWS
+                services including EC2, S3, and networking. Implemented
+                real-world DevOps practices with scalable and reliable setups.
               </p>
+
+              <div className="flex gap-3 mt-3">
+                <a
+                  href="#"
+                  className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm hover:bg-sky-600"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href="#"
+                  className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* ---- WEB DEVELOPMENT (SECOND) ---- */}
+          {/* ---- WEB DEVELOPMENT ---- */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60">
                 <div className="h-full w-full overflow-y-scroll">
-                  <img
-                    src={web1}
-                    className="w-full mb-3 rounded-lg"
-                    alt="Web Dev Project 1"
-                  />
-                  <img
-                    src={web2}
-                    className="w-full rounded-lg"
-                    alt="Web Dev Project 2"
-                  />
+                  <img src={web1} className="w-full mb-3 rounded-lg" />
+                  <img src={web2} className="w-full rounded-lg" />
                 </div>
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
                 Web Development
               </h3>
-              <p className="text-slate-400">
-                Creative UI layouts, React projects, responsive web apps, and
-                real-world interfaces built with clean code and modern tools.
+
+              <p className="text-slate-400 text-sm">
+                Collaborative e-library web application built with React,
+                featuring user-friendly navigation and dynamic content. Deployed
+                using Vercel with CI/CD integration from GitHub.
               </p>
+
+              <div className="flex gap-3 mt-3">
+                <a
+                  href="https://e-library-lime-three.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm hover:bg-sky-600"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/E-Library-Group-5/E-Library"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* ---- TEXTILE DESIGN (THIRD) ---- */}
+          {/* ---- TEXTILE DESIGN ---- */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60">
                 <div className="h-full w-full overflow-y-scroll">
-                  <img
-                    src={textile1}
-                    className="w-full mb-3 rounded-lg"
-                    alt="Textile Design 1"
-                  />
-                  <img
-                    src={textile2}
-                    className="w-full rounded-lg"
-                    alt="Textile Design 2"
-                  />
+                  <img src={textile1} className="w-full mb-3 rounded-lg" />
+                  <img src={textile2} className="w-full rounded-lg" />
                 </div>
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
                 Textile Design
               </h3>
-              <p className="text-slate-400">
-                Custom fabric patterns, uniforms, and digital textile work
-                blending creativity with design principles.
+
+              <p className="text-slate-400 text-sm">
+                Designed custom fabric patterns and textile solutions, combining
+                creativity, cultural storytelling, and strong visual aesthetics.
               </p>
+
+              <div className="flex gap-3 mt-3">
+                <a
+                  href="#"
+                  className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
+                >
+                  View Designs
+                </a>
+              </div>
             </div>
           </div>
         </div>
