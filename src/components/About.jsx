@@ -12,9 +12,8 @@ const About = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">About</h2>
           <p className="text-slate-400 text-sm md:text-base">
-            I blend technology, design, and storytelling to create experiences
-            that feel simple on the surface but are thoughtfully engineered
-            underneath.
+            I combine technology, design, and problem-solving to build digital
+            experiences that are clear, functional, and thoughtfully crafted.
           </p>
         </div>
 
@@ -27,29 +26,27 @@ const About = () => {
             </p>
 
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-              Hi, I'm Naomi, a calm-minded creative who designs tactile,
-              cloud-powered digital journeys.
+              Hi, I'm Naomi, a Front-End Developer and Cloud Engineer with a
+              strong design foundation.
             </h3>
 
             <p className="text-slate-300 text-sm md:text-base">
-              I'm a curious builder who moves comfortably between{" "}
-              <span className="text-sky-400 font-medium">
-                front-end development
-              </span>
-              ,{" "}
-              <span className="text-sky-400 font-medium">
-                cloud engineering
-              </span>{" "}
-              and{" "}
-              <span className="text-sky-400 font-medium">textile design</span>.
-              Whether I'm coding an interface, designing inclusive tactile
-              experiences, or architecting on AWS, I care about clarity,
-              accessibility, and quiet confidence in every detail.
+              I build responsive, user-focused web applications using React and
+              modern CSS frameworks, and deploy them using AWS cloud
+              technologies. My work focuses on creating clean interfaces,
+              scalable systems, and seamless user experiences.
             </p>
 
             <p className="text-slate-400 text-sm md:text-base">
-              I love turning messy ideas into structured, beautiful outcomes;
-              especially for education, sustainability, and women-in-tech
+              With a background in textile design, I bring a strong eye for
+              detail, color, and user-centered thinking. This allows me to
+              create products that are not only functional, but visually
+              intuitive and engaging.
+            </p>
+
+            <p className="text-slate-400 text-sm md:text-base">
+              I enjoy turning ideas into structured, production-ready solutions,
+              especially in education, sustainability, and community-driven
               spaces.
             </p>
 
@@ -58,12 +55,13 @@ const About = () => {
                 onClick={() =>
                   document
                     .querySelector("#portfolio")
-                    .scrollIntoView({ behavior: "smooth" })
+                    ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-600 font-semibold"
               >
-                View My Work
+                View Projects
               </button>
+
               <button className="px-6 py-2.5 rounded-full border border-sky-500 text-sky-400 hover:bg-sky-500/10 text-sm font-semibold">
                 Download Resume
               </button>
@@ -88,7 +86,8 @@ const About = () => {
             <p className="text-xs text-sky-400 mb-1">Focus</p>
             <h4 className="text-sm font-semibold mb-1">Front-End & Cloud</h4>
             <p className="text-xs text-slate-400">
-              Building responsive UIs, wiring them to scalable AWS backends.
+              Building responsive interfaces and deploying scalable applications
+              with AWS.
             </p>
           </div>
 
@@ -98,7 +97,8 @@ const About = () => {
               Textile & Product Design
             </h4>
             <p className="text-xs text-slate-400">
-              Strong eye for pattern, texture, color and human-centered detail.
+              Strong eye for detail, visual balance, color, and user-centered
+              design.
             </p>
           </div>
 
@@ -106,17 +106,19 @@ const About = () => {
             <p className="text-xs text-sky-400 mb-1">Strength</p>
             <h4 className="text-sm font-semibold mb-1">Problem-Solving</h4>
             <p className="text-xs text-slate-400">
-              Calm under pressure, I love debugging both code and concepts.
+              Calm under pressure and focused on debugging, improvement, and
+              practical solutions.
             </p>
           </div>
 
           <div className="border border-slate-800 bg-slate-900/60 rounded-xl p-4">
             <p className="text-xs text-sky-400 mb-1">Currently</p>
             <h4 className="text-sm font-semibold mb-1">
-              Growing in Cloud & React
+              Building with React & AWS
             </h4>
             <p className="text-xs text-slate-400">
-              AWS Certified Cloud Practitioner, building real-world projects.
+              AWS Certified Cloud Practitioner, building real-world projects and
+              growing in modern web development.
             </p>
           </div>
         </div>
@@ -130,28 +132,30 @@ const About = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <span className="text-sky-400 font-semibold">2018-2023</span>
-              <span>Built and taught in textile & fashion projects</span>
+              <span className="text-sky-400 font-semibold">2018–2023</span>
+              <span>Built and taught in textile and fashion projects</span>
             </div>
 
             <div className="flex items-center gap-3">
               <span className="text-sky-400 font-semibold">Feb 2025</span>
-              <span>Learned Web Development at MEST Africa</span>
+              <span>Completed Web Development Training at MEST Africa</span>
             </div>
 
             <div className="flex items-center gap-3">
               <span className="text-sky-400 font-semibold">Aug 2025</span>
               <span>
-                AWS Cloud Practitioner - Certified (AmaliTech Training Program)
+                Earned AWS Certified Cloud Practitioner (AmaliTech Training
+                Program)
               </span>
             </div>
           </div>
 
           <div className="text-center md:text-left">
             <p className="text-sm italic text-slate-300">
-              “Building calm, meaningful experiences through thoughtful code,
-              tactile design, and a little bit of stubborn curiosity.”
+              “Building meaningful digital experiences through thoughtful code,
+              clear design, and curiosity.”
             </p>
+
             <div className="mt-4 flex flex-wrap gap-2 justify-center md:justify-start">
               <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">
                 Front-End
@@ -160,7 +164,7 @@ const About = () => {
                 AWS Cloud
               </span>
               <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">
-                Textile Design
+                Design Thinking
               </span>
               <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">
                 Inclusive Experiences
