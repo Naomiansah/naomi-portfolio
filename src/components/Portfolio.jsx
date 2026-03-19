@@ -1,6 +1,6 @@
 import React from "react";
 
-import portfoliorchitecture from "../assets/images/portfoliorchitecture.png";
+import portfolioarchitecture from "../assets/images/portfolioarchitecture.png";
 
 import web1 from "../assets/images/web1.jpeg";
 import web2 from "../assets/images/web2.jpeg";
@@ -32,7 +32,7 @@ const Portfolio = () => {
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60 flex items-center justify-center">
                 <img
-                  src={portfoliorchitecture}
+                  src={portfolioarchitecture}
                   alt="AWS Cloud Architecture"
                   className="w-full h-full object-contain rounded-lg"
                 />
