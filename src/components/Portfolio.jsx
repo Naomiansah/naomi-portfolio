@@ -1,12 +1,8 @@
 import React from "react";
 
 import portfolioarchitecture from "../assets/images/portfolioarchitecture.png";
-
-import web1 from "../assets/images/web1.jpeg";
-import web2 from "../assets/images/web2.jpeg";
-
-import textile1 from "../assets/images/textile1.jpg";
-import textile2 from "../assets/images/textile2.jpeg";
+import dmsmigration from "../assets/images/dmsmigration.png";
+import vpcendpoint from "../assets/images/vpcendpoint.png";
 
 const Portfolio = () => {
   return (
@@ -15,57 +11,51 @@ const Portfolio = () => {
       className="min-h-screen bg-slate-900 text-slate-100 py-20"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8">
+        {/* Heading */}
         <h2 className="text-4xl font-bold text-center text-sky-400 mb-8">
           Portfolio
         </h2>
 
         <p className="text-center text-slate-300 max-w-2xl mx-auto mb-12">
-          A showcase of my work across cloud engineering, web development, and
-          creative design, combining technical skill with user-centered
-          thinking.
+          Hands-on cloud projects demonstrating AWS infrastructure, automation,
+          networking, security, and operational reliability.
         </p>
 
-        {/* GRID */}
+        {/* PROJECT GRID */}
         <div className="grid md:grid-cols-3 gap-10">
-          {/* ---- CLOUD PROJECT ---- */}
+          {/* PROJECT 1 — CLOUD PORTFOLIO INFRASTRUCTURE */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
               <div className="overflow-hidden rounded-lg h-60 flex items-center justify-center">
                 <img
                   src={portfolioarchitecture}
-                  alt="AWS Cloud Architecture"
+                  alt="AWS Cloud Portfolio Architecture"
                   className="w-full h-full object-contain rounded-lg"
                 />
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
-                Cloud Engineering
+                AWS Cloud Portfolio Infrastructure
               </h3>
 
-              {/* 👉 ADD TAGS HERE */}
               <div className="flex flex-wrap gap-2 text-xs">
-                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
-                  AWS
-                </span>
-                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
-                  CloudFront
-                </span>
-                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
-                  S3
-                </span>
-                <span className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md">
-                  CI/CD
-                </span>
+                {["AWS", "S3", "CloudFront", "Route 53", "CI/CD"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
               <p className="text-slate-400 text-sm">
-                Designed and deployed a secure static website using Amazon S3
-                and CloudFront, integrated with a CI/CD pipeline using GitHub
-                Actions for automated builds and deployments. Implemented DNS
-                routing and edge caching for performance and scalability.
+                Designed and deployed a secure static website architecture using
+                Amazon S3 and CloudFront, with DNS routing and automated
+                deployments through a Git-based CI/CD workflow.
               </p>
 
-              <div className="flex gap-3 mt-3">
+              <div className="flex flex-wrap gap-3 mt-3">
                 <a
                   href="https://dev.to/naomi_ansah_d792faf7a1276/how-i-secured-my-static-website-at-the-edge-using-amazon-cloudfront-12ho"
                   target="_blank"
@@ -77,6 +67,8 @@ const Portfolio = () => {
 
                 <a
                   href="https://github.com/Naomiansah/s3-cloudfront-terraform"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
                 >
                   GitHub
@@ -85,73 +77,94 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* ---- WEB DEVELOPMENT ---- */}
+          {/* PROJECT 2 — DATABASE MIGRATION */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
-              <div className="overflow-hidden rounded-lg h-60">
-                <div className="h-full w-full overflow-y-scroll">
-                  <img src={web1} className="w-full mb-3 rounded-lg" />
-                  <img src={web2} className="w-full rounded-lg" />
-                </div>
+              <div className="overflow-hidden rounded-lg h-60 flex items-center justify-center">
+                <img
+                  src={dmsmigration}
+                  alt="AWS Database Migration Architecture"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
-                Web Development
+                AWS Database Migration with Terraform
               </h3>
 
+              <div className="flex flex-wrap gap-2 text-xs">
+                {["Terraform", "AWS DMS", "RDS", "PostgreSQL", "CDC"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+
               <p className="text-slate-400 text-sm">
-                Collaborative e-library web application built with React,
-                featuring user-friendly navigation and dynamic content. Deployed
-                using Vercel with CI/CD integration from GitHub.
+                Designed and implemented an AWS database migration architecture
+                using Terraform, migrating MariaDB to Amazon RDS for PostgreSQL
+                with AWS DMS and ongoing replication using Change Data Capture.
               </p>
 
-              <div className="flex gap-3 mt-3">
+              <div className="flex flex-wrap gap-3 mt-3">
                 <a
-                  href="https://e-library-lime-three.vercel.app/"
+                  href="https://github.com/Naomiansah/terraform-aws-dms-mariadb-postgresql-migration"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm hover:bg-sky-600"
                 >
-                  Live Demo
-                </a>
-
-                <a
-                  href="https://github.com/E-Library-Group-5/E-Library"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
-                >
                   GitHub
                 </a>
               </div>
             </div>
           </div>
 
-          {/* ---- TEXTILE DESIGN ---- */}
+          {/* PROJECT 3 — PRIVATE EC2 TO S3 */}
           <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-xl p-4 shadow-lg hover:shadow-sky-500/30 transition">
             <div className="space-y-4">
-              <div className="overflow-hidden rounded-lg h-60">
-                <div className="h-full w-full overflow-y-scroll">
-                  <img src={textile1} className="w-full mb-3 rounded-lg" />
-                  <img src={textile2} className="w-full rounded-lg" />
-                </div>
+              <div className="overflow-hidden rounded-lg h-60 flex items-center justify-center">
+                <img
+                  src={vpcendpoint}
+                  alt="Private EC2 to S3 VPC Endpoint Architecture"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
 
               <h3 className="text-xl font-semibold text-sky-300">
-                Textile Design
+                Secure Private EC2-to-S3 Architecture
               </h3>
 
+              <div className="flex flex-wrap gap-2 text-xs">
+                {["VPC", "EC2", "S3", "VPC Endpoint", "IAM"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 bg-sky-500/10 text-sky-400 rounded-md"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
               <p className="text-slate-400 text-sm">
-                Designed custom fabric patterns and textile solutions, combining
-                creativity, cultural storytelling, and strong visual aesthetics.
+                Designed a secure AWS architecture that allows an EC2 instance
+                in a private subnet to access Amazon S3 through a Gateway VPC
+                Endpoint without exposing traffic to the public internet or
+                requiring a NAT Gateway.
               </p>
 
-              <div className="flex gap-3 mt-3">
+              <div className="flex flex-wrap gap-3 mt-3">
                 <a
-                  href="#"
-                  className="px-4 py-2 border border-sky-500 text-sky-400 rounded-lg text-sm hover:bg-sky-500/10"
+                  href="https://dev.to/naomi_ansah_d792faf7a1276"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm hover:bg-sky-600"
                 >
-                  View Designs
+                  Case Study
                 </a>
               </div>
             </div>

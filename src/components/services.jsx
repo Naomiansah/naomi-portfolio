@@ -2,56 +2,52 @@ import React from "react";
 
 const services = [
   {
-    icon: "💻",
-    title: "Front-End Development",
-    subtitle: "Clean, responsive interfaces",
+    title: "Cloud Infrastructure & AWS",
+    subtitle: "Secure, scalable cloud environments",
     description:
-      "I design and build user interfaces with React and Tailwind, focusing on clarity, accessibility, and smooth user journeys.",
+      "I design and configure AWS infrastructure with a focus on security, availability, networking, and operational reliability.",
     points: [
-      "Landing pages & personal portfolios",
-      "Responsive layouts for mobile & desktop",
-      "Reusable components and UI systems",
+      "EC2, S3, VPC, IAM, and Route 53",
+      "Load balancing and Auto Scaling",
+      "Secure network and access configurations",
     ],
-    tags: ["React", "Tailwind", "UI/UX"],
+    tags: ["AWS", "Networking", "Cloud Infrastructure"],
   },
   {
-    icon: "☁️",
-    title: "Cloud & AWS Support",
-    subtitle: "Lightweight cloud solutions",
+    title: "Infrastructure as Code & Automation",
+    subtitle: "Repeatable infrastructure deployments",
     description:
-      "I help structure simple, secure cloud setups using AWS fundamentals learned through the AWS re/Start programme.",
+      "I use Terraform and automation practices to provision and manage cloud infrastructure consistently and efficiently.",
     points: [
-      "Mapping ideas to AWS services (EC2, S3, RDS, etc.)",
-      "Basic cost-aware architectures",
-      "Documentation & visual diagrams for non-technical teams",
+      "Terraform-based AWS deployments",
+      "Reusable infrastructure configurations",
+      "Git-based deployment workflows",
     ],
-    tags: ["AWS", "Architecture Basics", "Diagrams"],
+    tags: ["Terraform", "IaC", "Automation"],
   },
   {
-    icon: "🧵",
-    title: "Textile & Surface Design",
-    subtitle: "Tactile, story-driven visuals",
+    title: "Cloud Support & Troubleshooting",
+    subtitle: "Diagnosing infrastructure and application issues",
     description:
-      "From fabric concepts to digital mockups, I create textile patterns and compositions inspired by everyday stories and culture.",
+      "I investigate and resolve cloud, Linux, networking, permissions, DNS, and application connectivity issues.",
     points: [
-      "Pattern and motif development",
-      "Color stories & moodboards",
-      "Tactile concepts for inclusive experiences",
+      "Linux and application troubleshooting",
+      "IAM permissions and access issues",
+      "DNS, CloudFront, and connectivity diagnosis",
     ],
-    tags: ["Textiles", "Color", "Storytelling"],
+    tags: ["Linux", "Troubleshooting", "DNS"],
   },
   {
-    icon: "🎓",
-    title: "Learning Support & Workshops",
-    subtitle: "Gentle, confidence-building guidance",
+    title: "Monitoring & Reliability",
+    subtitle: "Visibility into cloud workloads",
     description:
-      "I enjoy breaking complex topics into calm, practical sessions for beginners in tech or creative skills.",
+      "I configure monitoring and alerting to improve visibility into infrastructure health, performance, and operational events.",
     points: [
-      "Intro sessions on web & cloud fundamentals",
-      "Structured practice tasks & feedback",
-      "Encouraging, learner-friendly teaching style",
+      "Amazon CloudWatch metrics and alarms",
+      "SNS notifications and operational alerts",
+      "Infrastructure health and performance monitoring",
     ],
-    tags: ["Teaching", "Beginners", "Workshops"],
+    tags: ["CloudWatch", "Monitoring", "SNS"],
   },
 ];
 
@@ -65,10 +61,10 @@ const Services = () => {
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Services</h2>
+
           <p className="text-slate-400 text-sm md:text-base">
-            Here's how I can add value right now, combining my front-end, cloud,
-            and textile background to support thoughtful digital and creative
-            projects.
+            How I can add value through cloud infrastructure, automation,
+            troubleshooting, monitoring, and operational support.
           </p>
         </div>
 
@@ -79,17 +75,15 @@ const Services = () => {
               key={service.title}
               className="group border border-slate-800 bg-slate-900/60 rounded-2xl p-6 md:p-7 hover:border-sky-500/70 hover:bg-slate-900/80 transition-all duration-200"
             >
-              {/* Icon + title */}
-              <div className="flex items-start gap-4 mb-3">
-                <div className="text-3xl md:text-4xl">{service.icon}</div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-slate-400">
-                    {service.subtitle}
-                  </p>
-                </div>
+              {/* Service title */}
+              <div className="mb-3">
+                <h3 className="text-lg md:text-xl font-semibold">
+                  {service.title}
+                </h3>
+
+                <p className="text-xs md:text-sm text-slate-400 mt-1">
+                  {service.subtitle}
+                </p>
               </div>
 
               {/* Description */}

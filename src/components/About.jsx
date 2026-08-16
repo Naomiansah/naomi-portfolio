@@ -12,8 +12,8 @@ const About = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">About</h2>
           <p className="text-slate-400 text-sm md:text-base">
-            I combine technology, design, and problem-solving to build digital
-            experiences that are clear, functional, and thoughtfully crafted.
+            I build and troubleshoot secure, reliable cloud infrastructure with
+            AWS, Terraform, Linux, and automation.
           </p>
         </div>
 
@@ -26,28 +26,28 @@ const About = () => {
             </p>
 
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-              Hi, I'm Naomi, a Front-End Developer and Cloud Engineer with a
-              strong design foundation.
+              Hi, I'm Naomi, a Cloud Engineer with a background in software
+              development.
             </h3>
 
             <p className="text-slate-300 text-sm md:text-base">
-              I build responsive, user-focused web applications using React and
-              modern CSS frameworks, and deploy them using AWS cloud
-              technologies. My work focuses on creating clean interfaces,
-              scalable systems, and seamless user experiences.
+              I design, deploy, and troubleshoot AWS cloud infrastructure with a
+              focus on secure networking, reliability, monitoring, and
+              automation. I work with AWS, Terraform, Linux, and Infrastructure
+              as Code to build practical cloud solutions.
             </p>
 
             <p className="text-slate-300 text-sm md:text-base">
-              With a background in textile design, I bring a strong eye for
-              detail, color, and user-centered thinking. This allows me to
-              create products that are not only functional, but visually
-              intuitive and engaging.
+              My hands-on work includes configuring VPC networks, compute and
+              storage resources, IAM permissions, monitoring and alerts, as well
+              as troubleshooting DNS, connectivity, application availability,
+              and cloud configuration issues.
             </p>
 
             <p className="text-slate-300 text-sm md:text-base">
-              I enjoy turning ideas into structured, production-ready solutions,
-              especially in education, sustainability, and community-driven
-              spaces.
+              I also bring frontend development experience with React and
+              JavaScript, giving me an understanding of both the applications
+              users interact with and the infrastructure that supports them.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -84,41 +84,38 @@ const About = () => {
         <div className="grid gap-4 md:grid-cols-4 mb-10">
           <div className="border border-slate-800 bg-slate-900/60 rounded-xl p-4">
             <p className="text-xs text-sky-400 mb-1">Focus</p>
-            <h4 className="text-sm font-semibold mb-1">Front-End & Cloud</h4>
+            <h4 className="text-sm font-semibold mb-1">Cloud Infrastructure</h4>
             <p className="text-xs text-slate-400">
-              Building responsive interfaces and deploying scalable applications
-              with AWS.
+              Building secure, scalable, and reliable AWS environments.
             </p>
           </div>
 
           <div className="border border-slate-800 bg-slate-900/60 rounded-xl p-4">
             <p className="text-xs text-sky-400 mb-1">Background</p>
             <h4 className="text-sm font-semibold mb-1">
-              Textile & Product Design
+              Infrastructure as Code
             </h4>
             <p className="text-xs text-slate-400">
-              Strong eye for detail, visual balance, color, and user-centered
-              design.
+              Provisioning repeatable AWS infrastructure using Terraform.
             </p>
           </div>
 
           <div className="border border-slate-800 bg-slate-900/60 rounded-xl p-4">
             <p className="text-xs text-sky-400 mb-1">Strength</p>
-            <h4 className="text-sm font-semibold mb-1">Problem-Solving</h4>
+            <h4 className="text-sm font-semibold mb-1">Troubleshooting</h4>
             <p className="text-xs text-slate-400">
-              Calm under pressure and focused on debugging, improvement, and
-              practical solutions.
+              Diagnosing Linux, networking, IAM, DNS, and application issues.
             </p>
           </div>
 
           <div className="border border-slate-800 bg-slate-900/60 rounded-xl p-4">
             <p className="text-xs text-sky-400 mb-1">Currently</p>
             <h4 className="text-sm font-semibold mb-1">
-              Building with React & AWS
+              Monitoring & Operations
             </h4>
             <p className="text-xs text-slate-400">
-              AWS Certified Cloud Practitioner, building real-world projects and
-              growing in modern web development.
+              Improving visibility and reliability with CloudWatch, alerts, and
+              operational practices.
             </p>
           </div>
         </div>
@@ -128,7 +125,7 @@ const About = () => {
           <div className="grid gap-3 text-xs md:text-sm text-slate-300">
             <div className="flex items-center gap-3">
               <span className="text-sky-400 font-semibold">2014</span>
-              <span>BA in Industrial Art (Textiles), KNUST</span>
+              <span>BA in Industrial Art, KNUST</span>
             </div>
 
             <div className="flex items-center gap-3">

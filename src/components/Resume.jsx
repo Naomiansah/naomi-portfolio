@@ -1,21 +1,6 @@
-import React, { useEffect, useState } from "react";
-
-const skills = [
-  { name: "HTML & Semantic Markup", level: 90 },
-  { name: "CSS / Tailwind / Responsive Layouts", level: 85 },
-  { name: "JavaScript & React Basics", level: 75 },
-  { name: "AWS Cloud Fundamentals", level: 80 },
-  { name: "Textile & Surface Design", level: 95 },
-];
+import React from "react";
 
 const Resume = () => {
-  const [animateSkills, setAnimateSkills] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setAnimateSkills(true), 300);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section
       id="resume"
@@ -26,8 +11,8 @@ const Resume = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Resume</h2>
           <p className="text-slate-400 text-sm md:text-base">
-            A quick snapshot of my learning journey so far — blending textiles,
-            web development, and cloud engineering into one creative toolbox.
+            Cloud Engineer focused on AWS infrastructure, networking,
+            automation, monitoring, and troubleshooting.
           </p>
         </div>
 
@@ -47,7 +32,7 @@ const Resume = () => {
                     2010 – 2014
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
-                    BA Industrial Art (Textile Design)
+                    BA Industrial Art
                   </h4>
                   <p className="text-xs md:text-sm text-slate-400">
                     Kwame Nkrumah University of Science and Technology (KNUST),
@@ -85,7 +70,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Skills with animated bars */}
             {/* <div>
               <h3 className="text-lg md:text-xl font-semibold mb-4">
                 Professional Skills
@@ -102,36 +86,7 @@ const Resume = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="h-2 rounded-full bg-slate-800 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-sky-500 transition-all duration-700 ease-out"
-                        style={{
-                          width: animateSkills ? `${skill.level}%` : "0%",
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-            <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-4">
-                Professional Skills
-              </h3>
 
-              <div className="space-y-4">
-                {skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs md:text-sm text-slate-200">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-slate-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-
-                    {/* ⭐ NEW WRAPPER TO CONTROL MOBILE WIDTH */}
                     <div className="w-full max-w-[230px] mx-auto md:max-w-none">
                       <div className="h-2 rounded-full bg-slate-800 overflow-hidden">
                         <div
@@ -146,6 +101,7 @@ const Resume = () => {
                 ))}
               </div>
             </div>
+          </div> */}
           </div>
 
           {/* RIGHT COLUMN – EXPERIENCE */}
@@ -159,72 +115,70 @@ const Resume = () => {
                 {/* Cloud & Front-End Track */}
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    2025 - Present
+                    2026 - Present
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
-                    Junior Front-End & Cloud Engineer (Pathway)
+                    Cloud Engineer — Sichera Technologies
                   </h4>
                   <p className="text-xs md:text-sm text-slate-400 mb-2">
-                    Building portfolio projects with React & Tailwind while
-                    applying AWS fundamentals in small cloud experiments.
-                  </p>
-                  <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
-                    <li>Developed responsive UI components and layouts.</li>
-                    <li>Practised deploying and securing workloads on AWS.</li>
-                  </ul>
-                </div>
-
-                {/* AmaliTech */}
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    2025
-                  </p>
-                  <h4 className="text-sm md:text-base font-semibold">
-                    Cloud Trainee — AmaliTech AWS re/Start
-                  </h4>
-                  <p className="text-xs md:text-sm text-slate-400 mb-2">
-                    Intensive cloud training focused on core AWS services,
-                    security, and hands-on labs.
+                    Designing and implementing secure, scalable AWS
+                    infrastructure with a focus on availability, monitoring,
+                    networking, and operational reliability.
                   </p>
                   <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
                     <li>
-                      Worked with EC2, S3, RDS, IAM, CloudWatch, and
-                      CloudFormation.
+                      Provision and manage AWS infrastructure using Terraform.
                     </li>
                     <li>
-                      Built a strong foundation in the Well-Architected
-                      Framework.
+                      Configure and troubleshoot Linux, networking, IAM, DNS and
+                      cloud workloads.
                     </li>
                   </ul>
                 </div>
 
-                {/* Textile / Design Experience */}
+                {/* silver rock technologies*/}
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    2015 - 2023
+                    APR 2025 – MAY 2025
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
-                    Textile Designer & Creative Educator
+                    Frontend Developer Intern — Silver Rock Technology Services
                   </h4>
                   <p className="text-xs md:text-sm text-slate-400 mb-2">
-                    Designed textile pieces and taught garment construction with
-                    a focus on creativity and confidence-building.
+                    Contributed to an AI-powered educational management platform
+                    using React.
                   </p>
                   <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
-                    <li>Created custom and upcycled textile designs.</li>
+                    <li>Developed responsive, reusable frontend components.</li>
+                    <li>Tested and debugged application functionality.</li>
+                  </ul>
+                </div>
+
+                {/* teaching experience */}
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
+                    SEP 2020 – AUG 2021
+                  </p>
+                  <h4 className="text-sm md:text-base font-semibold">
+                    Instructional Facilitator — Perez University College
+                  </h4>
+                  <p className="text-xs md:text-sm text-slate-400 mb-2">
+                    Facilitated practical instruction in a structured academic
+                    environment, supporting students through technical processes
+                    and problem-solving.
+                  </p>
+                  <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
                     <li>
-                      Taught pattern cutting, sewing, and finishing techniques.
+                      Delivered structured technical instruction and practical
+                      demonstrations.
+                    </li>
+                    <li>
+                      Supported students through problems and provided clear
+                      guidance.
                     </li>
                   </ul>
                 </div>
               </div>
-            </div>
-
-            {/* Little note */}
-            <div className="text-xs md:text-sm text-slate-400 italic">
-              I'm actively building more projects to bridge my textile,
-              front-end, and cloud skills — this resume will keep evolving as my
-              journey does.
             </div>
           </div>
         </div>

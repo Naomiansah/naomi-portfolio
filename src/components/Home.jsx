@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import heropic from "../assets/images/heropic.jpg";
 
-const roles = ["Front-End Developer", "Cloud Engineer", "AWS Builder"];
+const roles = [ "Cloud Engineer", "AWS Builder" "Front-End Developer",];
 
 const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -53,25 +53,26 @@ const Home = () => {
           </p>
 
           <p className="text-slate-300 max-w-xl">
-            I build responsive, user-focused digital experiences with React,
-            modern CSS frameworks, and cloud technologies.
-          </p>
+  I design, deploy, and troubleshoot secure, scalable cloud infrastructure
+  on AWS using Terraform, Linux, networking, and automation.
+</p>
 
-          <p className="text-slate-300 max-w-xl">
-            My work combines front-end development, AWS deployment, and
-            problem-solving to create scalable, production-ready applications.
-          </p>
+<p className="text-slate-300 max-w-xl">
+  My work focuses on cloud infrastructure, monitoring, security, and
+  troubleshooting to build reliable and resilient environments.
+</p>
 
-          <p className="text-slate-300 max-w-xl">
-            I am passionate about clean interfaces, performance optimization,
-            and building solutions that are both functional and impactful.
-          </p>
+<p className="text-slate-300 max-w-xl">
+  I also bring frontend development experience with React and JavaScript,
+  giving me an understanding of both applications and the infrastructure
+  that supports them.
+</p>
 
-          <ul className="text-slate-300 max-w-xl space-y-1">
-            <li>✔ Built responsive web applications with React and Vite</li>
-            <li>✔ Deployed projects using AWS S3 and CloudFront</li>
-            <li>✔ Experience collaborating in Agile development teams</li>
-          </ul>
+<ul className="text-slate-300 max-w-xl space-y-1">
+  <li>✔ Build and deploy AWS infrastructure using Terraform</li>
+  <li>✔ Configure cloud networking, security, and monitoring</li>
+  <li>✔ Troubleshoot Linux, DNS, IAM, connectivity, and application issues</li>
+</ul>
 
           <div className="flex flex-wrap gap-4">
             <button
