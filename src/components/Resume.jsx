@@ -157,14 +157,17 @@ const Resume = () => {
                 {/* teaching experience */}
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    SEP 2016 – AUG 2016
+                    SEP 2016 – AUG 2017
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
                     Instructional Facilitator — Perez University College
                   </h4>
                   <p className="text-xs md:text-sm text-slate-400 mb-2">
-                    Delivered technical instruction and hands-on guidance on
-                    systems and technical workflows.
+                    <li>
+                      {" "}
+                      Delivered technical instruction and hands-on guidance on
+                      systems and technical workflows.
+                    </li>
                   </p>
                   <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
                     <li>
