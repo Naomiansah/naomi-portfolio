@@ -115,7 +115,7 @@ const Resume = () => {
                 {/* Cloud & Front-End Track */}
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    2026 - Present
+                    2022 - Present
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
                     Cloud Engineer — Sichera Technologies
@@ -157,20 +157,20 @@ const Resume = () => {
                 {/* teaching experience */}
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-sky-400 mb-1">
-                    SEP 2020 – AUG 2021
+                    SEP 2016 – AUG 2016
                   </p>
                   <h4 className="text-sm md:text-base font-semibold">
                     Instructional Facilitator — Perez University College
                   </h4>
                   <p className="text-xs md:text-sm text-slate-400 mb-2">
-                    Facilitated practical instruction in a structured academic
-                    environment, supporting students through technical processes
-                    and problem-solving.
+                    Delivered technical instruction and hands-on guidance on
+                    systems and technical workflows.
                   </p>
                   <ul className="text-xs md:text-sm text-slate-400 list-disc list-inside space-y-1">
                     <li>
-                      Delivered structured technical instruction and practical
-                      demonstrations.
+                      Mentored students in structured troubleshooting,
+                      root-cause analysis, and practical technical
+                      problem-solving
                     </li>
                     <li>
                       Supported students through problems and provided clear
